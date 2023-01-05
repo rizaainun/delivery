@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Delivery"
         tools:targetApi="31">
         <activity
-            android:name=".LoginnActivity"
+            android:name=".Activity.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -21,13 +21,6 @@
         </activity>
         <activity
             android:name=".ShowDetailActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
