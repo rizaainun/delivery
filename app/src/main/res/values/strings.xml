@@ -28,4 +28,9 @@
     <string name="goar">GO-AR</string>
     <string name="deliveryy">Delivery</string>
     <string name="e_a_t_sS">E A T S</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mychart">MyChart</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="profile">Profile</string>
 </resources>
