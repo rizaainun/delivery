@@ -20,13 +20,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ShowDetailActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Activity.IntroActivity"
             android:exported="true">
             <intent-filter>

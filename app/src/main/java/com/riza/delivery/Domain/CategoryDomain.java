@@ -1,6 +1,8 @@
 package com.riza.delivery.Domain;
 
 public class CategoryDomain {
+    public char[] getFee;
+    private String Fee;
     private String pic;
     private String title;
 

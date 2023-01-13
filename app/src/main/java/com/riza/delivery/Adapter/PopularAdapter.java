@@ -16,10 +16,10 @@ import com.riza.delivery.R;
 import java.util.ArrayList;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
-    ArrayList<PopularDomain> categoryDomains;
+    ArrayList<FoodDomain> categoryDomains;
     private ArrayList<CategoryDomain> PopularDomains;
 
-    public PopularAdapter(ArrayList<FoodDomain> categorylist) {
+    public PopularAdapter(ArrayList<FoodDomain> CtegoryList) {
     }
 
     public void setCategoryDomains(ArrayList<CategoryDomain> categoryDomains) {
