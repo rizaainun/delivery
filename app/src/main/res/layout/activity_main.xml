@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
 
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/button_nev_menu" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -24,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
-                    android:text="@string/homee"
+                    android:text="@string/home"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -52,18 +68,20 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:autofillHints=""
                     android:drawablePadding="10dp"
                     android:ems="10"
-                    android:hint="@string/search_productt"
+                    android:hint="@string/search_product"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     android:textColor="#0000"
                     android:textSize="18sp"
                     android:textStyle="italic"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5"
-                    android:autofillHints="" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout"
@@ -92,7 +110,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="@string/_20_discountt"
+                        android:text="@string/_20_discount"
                         android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold"
@@ -106,7 +124,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="@string/sweet_and_crispy_sirarichaa"
+                        android:text="@string/sweet_and_crispy_siraricha"
                         android:textColor="@color/black"
                         android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="@+id/textView7"
@@ -152,6 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
                 <TextView
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
@@ -193,6 +212,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
