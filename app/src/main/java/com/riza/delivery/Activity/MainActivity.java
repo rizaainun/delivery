@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPopular();
     }
 
+
     private void recyclerViewCategory() {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         RecyclerView recyclerViewCategoryList = findViewById(R.id.recyclerView);

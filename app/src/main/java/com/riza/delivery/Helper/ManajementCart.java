@@ -15,7 +15,7 @@ public class ManajementCart {
         this.tinyDB = tinyDB;
     }
     public void insertFood(FoodDomain item){
-        ArrayList<FoodDomain> listFood=;
-        boolean exis
+        ArrayList<FoodDomain> listFood;
+        boolean exis;
     }
 }
