@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.riza.delivery.Adapter.CategoryAdapter;
 import com.riza.delivery.Adapter.PopularAdapter;
 import com.riza.delivery.R;
+import com.riza.delivery.data.CategoryData;
 import com.riza.delivery.data.CategoryEntity;
+import com.riza.delivery.data.PopularData;
 import com.riza.delivery.data.PopularEntity;
 
 import java.util.ArrayList;
@@ -27,9 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
         rvCategory = findViewById(R.id.recyclerView2);
         rvCategory.setHasFixedSize(true);
+        listCategory.addAll( CategoryData.getListCategory() );
 
         rvPopular = findViewById(R.id.recyclerView);
         rvPopular.setHasFixedSize(true);
+        listPopular.addAll( PopularData.getListPopuler() );
 
         recyclerViewCategory();
         recyclerViewPopular();
