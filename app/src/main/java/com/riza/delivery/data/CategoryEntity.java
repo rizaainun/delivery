@@ -36,14 +36,10 @@ public class CategoryEntity implements Parcelable {
     }
 
     public String getName() { return name; }
-
-    public static Void setName(String name) {this.name = name;
-        return null;
-    }
+    public void setName(String name) {this.name = name;}
 
     public int getImage() {return image;}
-
-    public static void setImage(String name) {this.image = image;}
+    public void setImage(int image) {this.image = image;}
 
 
     public CategoryEntity() {

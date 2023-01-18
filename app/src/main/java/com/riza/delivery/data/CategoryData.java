@@ -25,8 +25,8 @@ public class CategoryData {
         ArrayList<CategoryEntity>list = new ArrayList<>();
         for (int position = 0; position < categoryName.length; position++){
             CategoryEntity categoryEntity = new CategoryEntity();
-            CategoryEntity.setName(categoryName[position]);
-            CategoryEntity.setImage(categoryName[position]);
+            categoryEntity.setName(categoryName[position]);
+            categoryEntity.setImage(categoryImage[position]);
             list.add(categoryEntity);
         }
         return list;
