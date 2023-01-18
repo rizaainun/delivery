@@ -3,78 +3,40 @@ package com.riza.delivery.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.riza.delivery.Domain.CategoryDomain;
 import com.riza.delivery.R;
+import com.riza.delivery.data.CategoryEntity;
 
 import java.util.ArrayList;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
-    ArrayList<CategoryDomain> categoryDomains;
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ListViewHloder> {
+    private ArrayList<CategoryEntity> listCategory;
 
-    public CategoryAdapter(ArrayList<CategoryDomain> CategoryList) {
-    }
-
-    public void setCategoryDomains(ArrayList<CategoryDomain> categoryDomains) {
-        this.categoryDomains = categoryDomains;
-    }
+    public CategoryAdapter(ArrayList<CategoryEntity>list) {this.listCategory = list; }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate( R.layout.viewholder_category,parent,false);
-
-        return new CategoryAdapter.ViewHolder(inflate);
+    public CategoryAdapter.ListViewHloder onCreateViewHolder(@NonNull ViewGroup parent,int viewType) {
+       View view = LayoutInflater.from( parent.getContext()).inflate( R.layout.viewholder_category,parent,false);
+        return new ListViewHloder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
-        holder.categoryName.setText(categoryDomains.get(position).getTitle());
-        String picUrl = null;
-        switch (position){
-            case 0:{
-                picUrl="R.drawable.cat_1";
-                break;
-            }
-            case 1: {
-                picUrl = "R.drawable.cat_2";
-                break;
-            }
-            case 2: {
-                picUrl = "R.drawable.cat_3";
-                break;
-            }
-            case 3: {
-                picUrl = "R.drawable.cat_4";
-                break;
-            }
-            case 4: {
-                picUrl = "R.drawable.cat_5";
-                break;
-            }
-        }
-        int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(picUrl,"drawable",holder.itemView.getContext().getPackageName());
+    public void onBindViewHolder(@NonNull CategoryAdapter.ListViewHloder holder,int position) {
+        final CategoryEntity categoryEntity = listCategory
     }
 
     @Override
-    public int getItemCount() { return categoryDomains.size(); }
+    public int getItemCount() {
+        return 0;
+    }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView categoryName;
-        ImageView categoryPic;
-        ConstraintLayout mainLayout;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            categoryName=itemView.findViewById(R.id.categoryName);
-            categoryPic=itemView.findViewById(R.id.categoryPic);
-            mainLayout=itemView.findViewById(R.id.mainLayout);
+    public class ListViewHloder extends RecyclerView.ViewHolder {
+        public ListViewHloder(@NonNull View itemView) {
+            super( itemView );
         }
     }
 }
