@@ -3,10 +3,13 @@ package com.riza.delivery.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.riza.delivery.R;
 import com.riza.delivery.data.CategoryEntity;
 
@@ -26,17 +29,32 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ListVi
 
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.ListViewHloder holder,int position) {
-        final CategoryEntity categoryEntity = listCategory
+        final CategoryEntity categoryEntity = listCategory.get(position);
+        Glide.with( holder.itemView.getContext() )
+                .load( categoryEntity.getImage() )
+                .into( holder.imgPic );
+        holder.tvName.setText( categoryEntity.getName() );
+
+//        holder.itemView.setOnClickListener( new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(holder.itemView.getContext(),DetailActivity)
+//            }
+//        } );
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listCategory.size();
     }
 
-    public class ListViewHloder extends RecyclerView.ViewHolder {
+    class ListViewHloder extends RecyclerView.ViewHolder {
+        ImageView imgPic;
+        TextView tvName;
         public ListViewHloder(@NonNull View itemView) {
             super( itemView );
+            imgPic = itemView.findViewById(R.id.categoryPic);
+            tvName = itemView.findViewById(R.id.categoryName);
         }
     }
 }
