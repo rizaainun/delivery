@@ -21,9 +21,9 @@ public class ShowDetailActivity extends AppCompatActivity {
 
         tvName = findViewById(R.id.textView4);
         imgpopular = findViewById(R.id.foodPic);
-        tvfee = findViewById(R.id.numberItemTxt );
+        tvfee = findViewById(R.id.textView15);
 
-        PopularEntity popular = getIntent().getParcelableExtra("POPLAR");
+        PopularEntity popular = getIntent().getParcelableExtra("POPULAR");
         tvName.setText(popular.getName());
         tvfee.setText(popular.getFee());
         Glide.with(ShowDetailActivity.this)

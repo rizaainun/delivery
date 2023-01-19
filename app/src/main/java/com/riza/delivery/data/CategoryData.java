@@ -8,7 +8,7 @@ public class CategoryData {
     private static String[] categoryName = {
             "Drink",
             "Snack",
-            "Fastfood",
+            "Fast food",
             "Dessert",
             "Donut"
     };

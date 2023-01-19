@@ -36,11 +36,14 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ListVi
         holder.tvName.setText( categoryEntity.getName() );
 
 //        holder.itemView.setOnClickListener( new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(holder.itemView.getContext(),DetailActivity)
-//            }
-//        } );
+//           @Override
+//           public void onClick(View view) {
+//               Intent intent = new Intent(holder.itemView.getContext(),ShowDetailActivity.class);
+//                    intent.putExtra("CATEGORY",categoryEntity);
+//                    holder.itemView.getContext().startActivity(intent);
+//
+//           }
+//       } );
     }
 
     @Override

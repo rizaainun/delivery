@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.riza.delivery.Activity.ShowDetailActivity;
-import com.riza.delivery.Domain.CategoryDomain;
-import com.riza.delivery.Domain.FoodDomain;
 import com.riza.delivery.R;
 import com.riza.delivery.data.PopularEntity;
 
@@ -36,9 +34,9 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ListView
         final PopularEntity popularEntity = listPopular.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(popularEntity.getImage())
-                .into(holder.imgPopuler);
+                .into(holder.imgPopular);
         holder.tvName.setText(popularEntity.getName());
-        holder.tvfee.setText(popularEntity.getFee());
+        holder.tvFee.setText(popularEntity.getFee());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,17 +52,17 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ListView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listPopular.size();
     }
 
      class ListViewHolder extends RecyclerView.ViewHolder {
-        ImageView imgPopuler;
-        TextView tvName,tvfee;
+        ImageView imgPopular;
+        TextView tvName,tvFee;
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgPopuler = itemView.findViewById(R.id.pic);
+            imgPopular = itemView.findViewById(R.id.pic);
             tvName = itemView.findViewById(R.id.title);
-            tvfee = itemView.findViewById(R.id.fee);
+            tvFee = itemView.findViewById(R.id.fee);
         }
     }
 }
