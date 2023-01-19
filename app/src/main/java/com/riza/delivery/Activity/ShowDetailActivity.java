@@ -21,7 +21,7 @@ public class ShowDetailActivity extends AppCompatActivity {
 
         tvName = findViewById(R.id.textView4);
         imgpopular = findViewById(R.id.foodPic);
-        tvfee = findViewById(R.id.textView6);
+        tvfee = findViewById(R.id.numberItemTxt );
 
         PopularEntity popular = getIntent().getParcelableExtra("POPLAR");
         tvName.setText(popular.getName());
